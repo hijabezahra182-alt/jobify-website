@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>JOBIFY — Find. Apply. Grow.</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header class="navbar">
+
+    <a href="#" class="logo">JOBIFY</a>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#jobs">Find Jobs</a>
+      <a href="#saved">Saved Jobs <span id="navSavedCount">0</span></a>
+      <a href="#categories">Categories</a>
+    </nav>
+
+    <div class="nav-actions">
+      <button class="login-btn">Log in</button>
+      <button class="signup-btn">Sign up</button>
+    </div>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <main>
+
+    <section class="hero" id="home">
+
+      <div class="hero-content">
+
+        <div class="hero-badge">
+          ✦ Opportunities made simpler
+        </div>
+
+        <h1>
+          Find the right
+          <span>opportunity.</span>
+        </h1>
+
+        <p>
+          Discover jobs and internships that match your
+          skills, interests and career goals.
+        </p>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+          <div class="search-field">
+            <span>⌕</span>
+
+            <input
+              type="text"
+              id="keywordInput"
+              placeholder="Job title, keyword or skill"
+            >
+          </div>
+
+
+          <div class="search-field location-field">
+            <span>⌖</span>
+
+            <input
+              type="text"
+              id="locationInput"
+              placeholder="Location or work type"
+            >
+          </div>
+
+
+          <button
+            class="search-btn"
+            id="searchButton"
+          >
+            Search Jobs
+          </button>
+
+        </div>
+
+
+        <div class="popular">
+
+          <span>Popular:</span>
+
+          <button class="popular-tag" data-search="Frontend">
+            Frontend
+          </button>
+
+          <button class="popular-tag" data-search="Python">
+            Python
+          </button>
+
+          <button class="popular-tag" data-search="AI">
+            AI
+          </button>
+
+          <button class="popular-tag" data-search="Remote">
+            Remote
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- HERO VISUAL -->
+
+      <div class="hero-visual">
+
+        <div class="floating-card card-one">
+
+          <div class="company-icon">N</div>
+
+          <div>
+            <strong>Frontend Developer</strong>
+            <small>NovaTech · Remote</small>
+          </div>
+
+          <span>♡</span>
+
+        </div>
+
+
+        <div class="floating-card card-two">
+
+          <div class="company-icon maroon">P</div>
+
+          <div>
+            <strong>Python Intern</strong>
+            <small>PixelWorks · Hybrid</small>
+          </div>
+
+          <span>♡</span>
+
+        </div>
+
+        <div class="hero-circle"></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= TRUST BAR ================= -->
+
+    <section class="trust-bar">
+
+      <p>BUILT FOR THE NEXT GENERATION OF WORK</p>
+
+      <div>
+        <span>Startups</span>
+        <span>Technology</span>
+        <span>Remote Work</span>
+        <span>Internships</span>
+        <span>Growing Teams</span>
+      </div>
+
+    </section>
+
+
+    <!-- ================= JOBS ================= -->
+
+    <section class="jobs-section" id="jobs">
+
+      <div class="section-heading">
+
+        <div>
+          <span class="eyebrow">EXPLORE OPPORTUNITIES</span>
+          <h2>Featured jobs</h2>
+        </div>
+
+        <div class="results-area">
+
+          <span id="resultsCount">
+            6 opportunities
+          </span>
+
+          <button id="resetSearch">
+            Reset
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- FILTERS -->
+
+      <div class="filters">
+
+        <button class="filter active" data-filter="all">
+          All
+        </button>
+
+        <button class="filter" data-filter="remote">
+          Remote
+        </button>
+
+        <button class="filter" data-filter="internship">
+          Internship
+        </button>
+
+        <button class="filter" data-filter="full-time">
+          Full-time
+        </button>
+
+      </div>
+
+
+      <!-- JOB GRID -->
+
+      <div class="jobs-grid" id="jobsGrid">
+
+
+        <!-- JOB 1 -->
+
+        <article
+          class="job-card"
+          data-title="Junior Frontend Developer"
+          data-company="NovaTech"
+          data-location="Remote"
+          data-type="full-time"
+          data-skills="HTML CSS JavaScript Frontend"
+        >
+
+          <div class="job-card-top">
+
+            <div class="company-logo">
+              N
+            </div>
+
+            <button
+              class="save-btn"
+              aria-label="Save job"
+            >
+              ♡
+            </button>
+
+          </div>
+
+          <span class="job-type">
+            FULL-TIME
+          </span>
+
+          <h3>
+            Junior Frontend Developer
+          </h3>
+
+          <p class="company">
+            NovaTech
+          </p>
+
+          <div class="tags">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+
+          <div class="job-bottom">
+            <strong>$600–900</strong>
+            <span>Remote</span>
+          </div>
+
+        </article>
+
+
+        <!-- JOB 2 -->
+
+        <article
+          class="job-card"
+          data-title="Python Developer Intern"
+          data-company="PixelWorks"
+          data-location="Hybrid"
+          data-type="internship"
+          data-skills="Python APIs Git"
+        >
+
+          <div class="job-card-top">
+
+            <div class="company-logo maroon">
+              P
+            </div>
+
+            <button
+              class="save-btn"
+              aria-label="Save job"
+            >
+              ♡
+            </button>
+
+          </div>
+
+          <span class="job-type">
+            INTERNSHIP
+          </span>
+
+          <h3>
+            Python Developer Intern
+          </h3>
+
+          <p class="company">
+            PixelWorks
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>APIs</span>
+            <span>Git</span>
+          </div>
+
+          <div class="job-bottom">
+            <strong>Paid</strong>
+            <span>Hybrid</span>
+          </div>
+
+        </article>
+
+
+        <!-- JOB 3 -->
+
+        <article
+          class="job-card"
+          data-title="AI Content Assistant"
+          data-company="Astra Labs"
+          data-location="Remote"
+          data-type="remote"
+          data-skills="AI Content Research"
+        >
+
+          <div class="job-card-top">
+
+            <div class="company-logo">
+              A
+            </div>
+
+            <button
+              class="save-btn"
+              aria-label="Save job"
+            >
+              ♡
+            </button>
+
+          </div>
+
+          <span class="job-type">
+            REMOTE
+          </span>
+
+          <h3>
+            AI Content Assistant
+          </h3>
+
+          <p class="company">
+            Astra Labs
+          </p>
+
+          <div class="tags">
+            <span>AI</span>
+            <span>Content</span>
+            <span>Research</span>
+          </div>
+
+          <div class="job-bottom">
+            <strong>$400–700</strong>
+            <span>Remote</span>
+          </div>
+
+        </article>
+
+
+        <!-- JOB 4 -->
+
+        <article
+          class="job-card"
+          data-title="UI Developer"
+          data-company="North Studio"
+          data-location="Remote"
+          data-type="full-time"
+          data-skills="UI CSS JavaScript Design"
+        >
+
+          <div class="job-card-top">
+
+            <div class="company-logo">
+              N
+            </div>
+
+            <button
+              class="save-btn"
+              aria-label="Save job"
+            >
+              ♡
+            </button>
+
+          </div>
+
+          <span class="job-type">
+            FULL-TIME
+          </span>
+
+          <h3>
+            UI Developer
+          </h3>
+
+          <p class="company">
+            North Studio
+          </p>
+
+          <div class="tags">
+            <span>UI</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+
+          <div class="job-bottom">
+            <strong>$700–1000</strong>
+            <span>Remote</span>
+          </div>
+
+        </article>
+
+
+        <!-- JOB 5 -->
+
+        <article
+          class="job-card"
+          data-title="Data Analyst Intern"
+          data-company="Insight Labs"
+          data-location="Islamabad"
+          data-type="internship"
+          data-skills="Python Data Excel SQL"
+        >
+
+          <div class="job-card-top">
+
+            <div class="company-logo maroon">
+              I
+            </div>
+
+            <button
+              class="save-btn"
+              aria-label="Save job"
+            >
+              ♡
+            </button>
+
+          </div>
+
+          <span class="job-type">
+            INTERNSHIP
+          </span>
+
+          <h3>
+            Data Analyst Intern
+          </h3>
+
+          <p class="company">
+            Insight Labs
+          </p>
+
+          <div class="tags">
+            <span>Python</span>
+            <span>Excel</span>
+            <span>SQL</span>
+          </div>
+
+          <div class="job-bottom">
+            <strong>Paid</strong>
+            <span>Islamabad</span>
+          </div>
+
+        </article>
+
+
+        <!-- JOB 6 -->
+
+        <article
+          class="job-card"
+          data-title="AI Automation Intern"
+          data-company="FutureStack"
+          data-location="Remote"
+          data-type="internship"
+          data-skills="AI Python Automation"
+        >
+
+          <div class="job-card-top">
+
+            <div class="company-logo">
+              F
+            </div>
+
+            <button
+              class="save-btn"
+              aria-label="Save job"
+            >
+              ♡
+            </button>
+
+          </div>
+
+          <span class="job-type">
+            INTERNSHIP
+          </span>
+
+          <h3>
+            AI Automation Intern
+          </h3>
+
+          <p class="company">
+            FutureStack
+          </p>
+
+          <div class="tags">
+            <span>AI</span>
+            <span>Python</span>
+            <span>Automation</span>
+          </div>
+
+          <div class="job-bottom">
+            <strong>Paid</strong>
+            <span>Remote</span>
+          </div>
+
+        </article>
+
+      </div>
+
+
+      <!-- NO RESULTS -->
+
+      <div
+        id="noResults"
+        class="no-results hidden"
+      >
+        <h3>No opportunities found</h3>
+        <p>
+          Try another keyword, location or filter.
+        </p>
+      </div>
+
+    </section>
+
+
+    <!-- ================= SAVED JOBS ================= -->
+
+    <section
+      class="saved-section"
+      id="saved"
+    >
+
+      <div class="section-heading">
+
+        <div>
+          <span class="eyebrow">YOUR SHORTLIST</span>
+          <h2>Saved Jobs</h2>
+        </div>
+
+        <span id="savedTotal">
+          0 saved
+        </span>
+
+      </div>
+
+
+      <div
+        id="savedJobsContainer"
+        class="saved-jobs-container"
+      >
+
+        <!-- JavaScript inserts saved jobs here -->
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CATEGORIES ================= -->
+
+    <section
+      class="categories"
+      id="categories"
+    >
+
+      <div class="section-heading">
+
+        <div>
+          <span class="eyebrow">FIND YOUR SPACE</span>
+          <h2>Explore by category</h2>
+        </div>
+
+      </div>
+
+
+      <div class="category-grid">
+
+        <div class="category-card">
+          <span>⌘</span>
+          <h3>Technology</h3>
+          <p>1,240 opportunities</p>
+        </div>
+
+        <div class="category-card">
+          <span>✦</span>
+          <h3>AI & Data</h3>
+          <p>680 opportunities</p>
+        </div>
+
+        <div class="category-card">
+          <span>◈</span>
+          <h3>Design</h3>
+          <p>430 opportunities</p>
+        </div>
+
+        <div class="category-card">
+          <span>◎</span>
+          <h3>Marketing</h3>
+          <p>520 opportunities</p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= WHY JOBIFY ================= -->
+
+    <section class="why">
+
+      <div class="why-content">
+
+        <span class="eyebrow">
+          WHY JOBIFY
+        </span>
+
+        <h2>
+          Your next opportunity
+          shouldn't be hard to find.
+        </h2>
+
+        <p>
+          Jobify brings jobs, internships and career
+          opportunities into one simple experience —
+          so you can spend less time searching and more
+          time building your future.
+        </p>
+
+        <button class="dark-button">
+          Explore opportunities →
+        </button>
+
+      </div>
+
+
+      <div class="why-list">
+
+        <div>
+          <strong>01</strong>
+          <h3>Search smarter</h3>
+          <p>
+            Find relevant opportunities with simple filters.
+          </p>
+        </div>
+
+        <div>
+          <strong>02</strong>
+          <h3>Stay organized</h3>
+          <p>
+            Save jobs and keep track of opportunities.
+          </p>
+        </div>
+
+        <div>
+          <strong>03</strong>
+          <h3>Keep growing</h3>
+          <p>
+            Discover roles that match your career goals.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= CTA ================= -->
+
+    <section class="cta">
+
+      <div>
+        <span class="eyebrow">
+          READY FOR YOUR NEXT MOVE?
+        </span>
+
+        <h2>
+          Find it. Apply. Grow.
+        </h2>
+      </div>
+
+      <button>
+        Start exploring →
+      </button>
+
+    </section>
+
+  </main>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div>
+      <div class="footer-logo">
+        JOBIFY
+      </div>
+
+      <p>
+        Find. Apply. Grow.
+      </p>
+    </div>
+
+
+    <div class="footer-links">
+
+      <a href="#jobs">Find Jobs</a>
+      <a href="#saved">Saved Jobs</a>
+      <a href="#categories">Categories</a>
+      <a href="#home">Back to top</a>
+
+    </div>
+
+
+    <p class="copyright">
+      © 2026 Jobify. Built for the next generation.
+    </p>
+
+  </footer>
+
+
+  <!-- IMPORTANT -->
+  <script src="script.js"></script>
+
+</body>
+</html>
