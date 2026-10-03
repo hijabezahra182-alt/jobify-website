@@ -10,8 +10,7 @@ Jobify is designed to make discovering and organizing career opportunities simpl
 
 ## ✦ Live Demo
 
-**Coming soon — deployed with GitHub Pages**
-
+https://hijabezahra182-alt.github.io/jobify-website/
 ## ✦ GitHub Repository
 
 This repository contains the complete source code for Jobify 2.0.
